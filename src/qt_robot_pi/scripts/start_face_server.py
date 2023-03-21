@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3.7
 
 import rospy
 import subprocess
@@ -6,8 +6,8 @@ from std_srvs.srv import Trigger, TriggerResponse
 import os
 
 
-kill_command = "pkill luakit"
-start_command = "luakit --display=:0 -U {url}".format(
+kill_command = "pkill surf"
+start_command = "DISPLAY=:0 surf {url}".format(
     url=rospy.get_param('qt_robot/face/url')
 )
 
