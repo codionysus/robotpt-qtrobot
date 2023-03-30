@@ -39,7 +39,7 @@
     <group if="$(arg is_record_audio)">
         <include file="$(find audio_capture2)/launch/capture.launch">
             <arg name="output_directory" value="$(arg upload_directory)"/>
-            <arg name="audio_topic" value="audio/audio"/>
+            <arg name="audio_topic" value="/qt_respeaker_app/channel0"/>
             <arg name="is_record_topic" value="data_capture/is_record"/>
             <arg name="is_launch_audio_capture" value="true"/>
         </include>
